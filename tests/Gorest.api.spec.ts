@@ -6,7 +6,8 @@ let auth_token = { Authorization: "Bearer 5b2547fac2df8ee870419f6a813630a07578a4
 
 test('API test in single test', async ({request}) => {
 
-    let response = await request.get("https://gorest.co.in/public/v2/users/8612626", {
+    let response = await request.get("https://gorest.co.in/public/v2/users/8678221", {
+
         headers: auth_token
         
     });
@@ -24,8 +25,10 @@ console.log("Status text : ",response.statusText());
 let body = 
 
 {
+name: 'Tukaram Munde',
+email: 'tukaram@example.com',    
 gender: 'MALE',
-status: 'InActive'
+status: 'Active'
 }
 
 //API request to create user details using POST method.
